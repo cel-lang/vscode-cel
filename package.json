@@ -2,7 +2,7 @@
     "name": "cel",
     "displayName": "Cel",
     "description": "",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "publisher": "cel-lang",
     "icon": "images/cel.png",
     "engines": {
@@ -21,21 +21,33 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "languages": [{
-            "id": "cel",
-            "aliases": ["Cel", "CEL", "cel"],
-            "extensions": [".cel"],
-            "configuration": "./cel.configuration.json"
-        }],
-        "grammars": [{
-            "language": "cel",
-            "scopeName": "source.cel",
-            "path": "./syntaxes/cel.json"
-        }],
-        "commands": [{
-            "command": "extension.format",
-            "title": "Format Cel Code"
-        }]
+        "languages": [
+            {
+                "id": "cel",
+                "aliases": [
+                    "Cel",
+                    "CEL",
+                    "cel"
+                ],
+                "extensions": [
+                    ".cel"
+                ],
+                "configuration": "./cel.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cel",
+                "scopeName": "source.cel",
+                "path": "./syntaxes/cel.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.format",
+                "title": "Format Cel Code"
+            }
+        ]
     },
     "configuration": {
         "type": "object",
@@ -49,7 +61,6 @@
             "cel.formatToolPath": {
                 "type": "string",
                 "default": "C:\\OCaml64\\home\\averym\\.opam\\4.03.0+mingw64c\\bin\\ocp-indent",
-
                 "description": "Path for code format tool."
             }
         }
